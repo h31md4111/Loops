@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
 public class IfElseTaskResolver {
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 //        double number = scanner.nextDouble();
 //
 //        findTheSign(number);
@@ -28,6 +28,8 @@ public class IfElseTaskResolver {
         int mark = scanner.nextInt();
 
         testMarkDescription(mark);
+
+        scanner.close();
 
     }
 

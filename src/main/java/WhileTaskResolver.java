@@ -1,14 +1,15 @@
 import java.util.Scanner;
 
 public class WhileTaskResolver {
+    private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
 //calculateFactorial();
 //        printAllEvenNumbersUntilN();
         decrementFromNToOne();
+        scanner.close();
     }
 
     public static void calculateFactorial() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some number to calculate factorial");
         int n = scanner.nextInt();
 
@@ -23,7 +24,6 @@ public class WhileTaskResolver {
     }
 
     public static void printAllEvenNumbersUntilN() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some number to calculate numbers that can be divided by 2 until this number");
         int n = scanner.nextInt();
         int i = 1;
@@ -36,7 +36,6 @@ public class WhileTaskResolver {
     }
 
     public static void decrementFromNToOne() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Enter some number to print decrement from this number to one");
         int n = scanner.nextInt();
         if (n <= 0) {

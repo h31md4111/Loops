@@ -1,15 +1,22 @@
 import java.util.Scanner;
 
 public class BreakAndContinueResolver {
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
-//sumPositiveNumbers();
+sumPositiveNumbers();
+
 //        skipDividedByThree();
+
+
 //        showOnlyPositiveScannedNumbers();
-        commandReader();
+
+
+//        commandReader();
+        scanner.close();
     }
 
     public static void sumPositiveNumbers() {
-        Scanner scanner = new Scanner(System.in);
         int result = 0;
 
         while (true) {
@@ -32,7 +39,6 @@ public class BreakAndContinueResolver {
     }
 
     public static void showOnlyPositiveScannedNumbers() {
-        Scanner scanner = new Scanner(System.in);
 
         while(true) {
             int number = scanner.nextInt();
@@ -43,7 +49,6 @@ public class BreakAndContinueResolver {
     }
 
     public static void commandReader() {
-        Scanner scanner = new Scanner(System.in);
 
         while(true) {
             System.out.println("Please enter some string");

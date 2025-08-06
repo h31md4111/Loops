@@ -1,12 +1,16 @@
 import java.util.Scanner;
 
 public class ForTaskResolver {
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 //    numberDividedByThree();
 //        sumFromOneToN();
 //        multiplyTable();
-//        isNumberPrime();
-oneToTenPrint();
+        isNumberPrime();
+//oneToTenPrint();
+
+        scanner.close();
     }
 
     public static void numberDividedByThree() {
@@ -19,7 +23,6 @@ oneToTenPrint();
     }
 
     public static void sumFromOneToN() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter some number");
         int n = scanner.nextInt();
         if (n < 0) {
@@ -35,7 +38,6 @@ oneToTenPrint();
     }
 
     public static void multiplyTable() {
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter some number");
         int n = scanner.nextInt();
         int result;
@@ -47,7 +49,6 @@ oneToTenPrint();
     }
 
     public static void isNumberPrime(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter some number");
         int n = scanner.nextInt();
 
@@ -55,7 +56,7 @@ oneToTenPrint();
         if (n <= 1) {
             isPrime = false;
         } else {
-            for(int i = 2; i < n - 1; i++) {
+            for(int i = 2; i <= Math.sqrt(n); i++) {
                 if (n % i == 0) {
                     isPrime = false;
                     break;

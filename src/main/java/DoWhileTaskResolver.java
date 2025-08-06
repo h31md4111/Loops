@@ -1,36 +1,38 @@
 import java.util.Scanner;
 
 public class DoWhileTaskResolver {
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void main(String[] args) {
 //askPositiveNumber();
 //        passwordCheck();
 //        oneToTenUsingDoWhile();
 //        exitFromApp();
-        digitsQuantity();
+//        digitsQuantity();
+
+        scanner.close();
     }
 
     public static void askPositiveNumber() {
-        Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        if (number <= 0) {
+        int number;
             do {
                 System.out.println("Please enter a positive number");
-                break;
+                number = scanner.nextInt();
             } while (number <= 0);
+        System.out.println("You entered: " + number);
         }
-    }
+
 
     public static void passwordCheck() {
-        Scanner scanner = new Scanner(System.in);
-        String password = scanner.next();
+        String password;
         String correctPassword = "1qaz";
 
-        if (!password.equals(correctPassword)) {
             do {
                 System.out.println("Please enter correct password");
-            } while (password.equals(correctPassword));
+                password = scanner.next();
+            } while (!password.equals(correctPassword));
+        System.out.println("authorization");
         }
-    }
 
     public static void oneToTenUsingDoWhile() {
         int i = 1;
@@ -42,7 +44,6 @@ public class DoWhileTaskResolver {
     }
 
     public static void exitFromApp() {
-        Scanner scanner = new Scanner(System.in);
         String exitword = "exit";
         String str;
 
@@ -57,7 +58,6 @@ public class DoWhileTaskResolver {
     }
 
     public static void digitsQuantity() {
-        Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
 
         int result = 0;
